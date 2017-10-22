@@ -4,4 +4,5 @@ export {
 } from './author';
 export {
   GetKotaQuery as getKota,
+  GetKelurahanQuery as getKelurahan,
 } from './JakartaSmartCity';

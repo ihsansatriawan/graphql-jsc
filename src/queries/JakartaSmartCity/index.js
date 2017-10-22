@@ -2,8 +2,8 @@
 import {
   GraphQLInt,
 } from 'graphql';
-import { GetKotaType } from '../../types/JakartaSmartCity/kota';
-import { getKota } from '../../api/JakartaSmartCity';
+import { GetKotaType, GetKelurahanType } from '../../types/JakartaSmartCity/kota';
+import { getKota, getKelurahan } from '../../api/JakartaSmartCity';
 
 const GetKotaQuery = {
   type: GetKotaType,
@@ -11,6 +11,13 @@ const GetKotaQuery = {
   resolve: (_, args) => getKota(),
 };
 
+const GetKelurahanQuery = {
+  type: GetKelurahanType,
+  args: {},
+  resolve: (_, args) => getKelurahan(),
+};
+
 export {
   GetKotaQuery,
+  GetKelurahanQuery,
 };
