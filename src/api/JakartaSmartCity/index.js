@@ -6,6 +6,7 @@ import URL from 'url';
 const JSC_SERVICES = {
   GetKota: `${config.JSC.HOSTNAME}/v1/kota`,
   GetKelurahan: `${config.JSC.HOSTNAME}/v1/kelurahan`,
+  GetKecamatan: `${config.JSC.HOSTNAME}/v1/kecamatan`,
 };
 
 const configFetch = (url, method) => ({
@@ -26,7 +27,13 @@ const getKelurahan = () => {
   return axios(configFetch(url, 'get')).then(response => response.data);
 };
 
+const getKecamatan = () => {
+  const url = URL.parse(JSC_SERVICES.GetKecamatan);
+  return axios(configFetch(url, 'get')).then(response => response.data);
+};
+
 export {
   getKota,
   getKelurahan,
+  getKecamatan,
 };

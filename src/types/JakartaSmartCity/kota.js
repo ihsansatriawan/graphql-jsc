@@ -29,6 +29,18 @@ const KelurahanType = new GraphQLObjectType({
   },
 });
 
+const KecamatanType = new GraphQLObjectType({
+  name: 'KecamatanType',
+  fields: {
+    kode_provinsi: { type: GraphQLInt },
+    nama_provinsi: { type: GraphQLString },
+    kode_kota: { type: GraphQLInt },
+    nama_kota: { type: GraphQLString },
+    kode_kecamatan: { type: GraphQLInt },
+    nama_kecamatan: { type: GraphQLString },
+  },
+});
+
 const GetKotaType = new GraphQLObjectType({
   name: 'GetKotaType',
   fields: {
@@ -47,9 +59,20 @@ const GetKelurahanType = new GraphQLObjectType({
   },
 });
 
+const GetKecamatanType = new GraphQLObjectType({
+  name: 'GetKecamatanType',
+  fields: {
+    status: { type: GraphQLString },
+    count: { type: GraphQLInt },
+    data: { type: new GraphQLList(KecamatanType) },
+  },
+});
+
 export {
   GetKotaType,
   KotaType,
   KelurahanType,
   GetKelurahanType,
+  KecamatanType,
+  GetKecamatanType,
 };

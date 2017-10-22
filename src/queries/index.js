@@ -5,4 +5,5 @@ export {
 export {
   GetKotaQuery as getKota,
   GetKelurahanQuery as getKelurahan,
+  GetKecamatanQuery as getKecamatan,
 } from './JakartaSmartCity';
