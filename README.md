@@ -12,20 +12,20 @@ Based on [Graphql Boilerplate](https://github.com/ihsansatriawan/graphql-boilerp
 Example Query
 ```
 {
-	getKecamatan {
-		status
-		count
-		data {
-			kode_provinsi
-			kode_kota
-			nama_kota
-			nama_provinsi
-			nama_kecamatan
-		}
-	}
+  getKecamatan {
+    status
+    count
+    data {
+      kode_provinsi
+      kode_kota
+      nama_kota
+      nama_provinsi
+      nama_kecamatan
+    }
+  }
 }
 ```
-Recommended use (Insomnia)[https://insomnia.rest/blog/introducing-graphql/] for tested Query
+Recommended use [Insomnia](https://insomnia.rest/blog/introducing-graphql/) for tested Query
 
 ## Production
 
