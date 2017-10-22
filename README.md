@@ -1,5 +1,5 @@
 # GraphQL for [Jakarta Smart City](http://api.jakarta.go.id)
-Based one [Graphql Boilerplate](https://github.com/ihsansatriawan/graphql-boilerplate)
+Based on [Graphql Boilerplate](https://github.com/ihsansatriawan/graphql-boilerplate)
 
 ## Installation
 
