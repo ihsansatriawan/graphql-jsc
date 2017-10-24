@@ -1,4 +1,4 @@
-# GraphQL for [Jakarta Smart City](http://api.jakarta.go.id)
+# GraphQL for [Jakarta Smart City](http://api.jakarta.go.id) [![Build Status](https://travis-ci.org/ihsansatriawan/graphql-jsc.svg?branch=master)](https://travis-ci.org/ihsansatriawan/graphql-jsc)
 Based on [Graphql Boilerplate](https://github.com/ihsansatriawan/graphql-boilerplate)
 
 ## Installation
