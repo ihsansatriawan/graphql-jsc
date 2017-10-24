@@ -1,10 +1,20 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 install:
-  - npm install
+- npm install
 script:
-  - cp .env.example .env
-  - npm run build
-  - node dist/index.js &
-  - npm run test
+- cp .env.example .env
+- npm run build
+- node dist/index.js &
+- npm run test
+deploy:
+  provider: heroku
+  api_key:
+    secure: YG+2ZNuRDed3wRwNptrQ9uo6WIiDQbXNJTa2BJt4L1oi9H+fClHdL2BfGgzwvo7iXiD+0G1G7F3Qe50lRk8rS5q/l+cLcCTMe6jQNV+HS9SCfIuVqNprw2Gh+BClBMWY+vaE8n4ISXCrFhNDMgP7EQMgBVQq+3QAVNdUT1T0KSGgDAffP7wIv7KX9GV2QDVmMXkqwWzvm7RcIsFZag+cvb3YLmumZt62vx/Rojgmjuq53PiBqWyGZurN6H8WdBxLl9yXiA0rH3Ix76HsVKxx4H2vugDB7gpT/icXvRtQz3tfF3BuDH4ILzMSmmnA1r366rpFaSQOZLHLXE7nJKTw2jaAIZSSySahIHDiEpSaGdiejICSOpGou6M60VML+u/wxTuOHs2bKZ8UBEAy+XtKzh6ZvjfweF9it+3lnR2K1721vsoSQ8CxrJqMzVX7SGJKoOBgSKRWknDicddiK3s2eE+sDpp7m8RMlGAaCA7EpcoFbKgEGA86gQi9SuZOSTEnBeqC0hdMXvE/JL7T3BMiefdEKzyceKYKWBcZXVVquSbqt3WJz5HkAyMmsZagDlZnXE4FwglRs5Zzx3y1pDJTWTculIAvYTfoN7Z1/fv5vh5VWwdK5XNCvHKHsa934FjdcAEvShdfk0hSdRIB7bUOk+FdaY7ai3kHd9FioV8TMFQ=
+  run:
+    - "npm run build"
+    - "node dist/index.js"
+  app: jsc-graphql
+  on:
+    repo: ihsansatriawan/graphql-jsc
