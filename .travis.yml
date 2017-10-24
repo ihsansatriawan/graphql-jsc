@@ -4,5 +4,6 @@ node_js:
 install:
   - npm install
 script:
-  - npm run start
+  - cp .env.example .env
+  - npm run build
   - npm run test
