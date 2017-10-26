@@ -13,12 +13,6 @@ const app = express();
 
 app.use('*', cors());
 
-app.use('/graphql', bodyParser.json(), graphqlExpress({
-  schema,
-  tracing: true,
-  cacheControl: true,
-}));
-
 if (process.env.NODE_ENV === 'production') {
   const engine = new Engine({
     engineConfig: {
@@ -35,6 +29,12 @@ if (process.env.NODE_ENV === 'production') {
   engine.start();
   app.use(engine.expressMiddleware());
 }
+
+app.use('/graphql', bodyParser.json(), graphqlExpress({
+  schema,
+  tracing: true,
+  cacheControl: true,
+}));
 
 if (process.env.NODE_ENV === 'dev') {
   app.use('/graphiql', graphiqlExpress({
