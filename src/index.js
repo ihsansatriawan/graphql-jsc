@@ -24,14 +24,14 @@ if (process.env.NODE_ENV === 'production') {
     engineConfig: {
       apiKey: config.GRAPHQL_ENGINE.API_KEY,
       logging: {
-        level: 'DEBUG' 
-      }
+        level: 'DEBUG',
+      },
     },
-    graphqlPort: process.env.PORT || config.get('port'),  
+    graphqlPort: process.env.PORT || config.get('port'),
     endpoint: '/graphql',
-    dumpTraffic: true     
+    dumpTraffic: true,
   });
-  
+
   engine.start();
   app.use(engine.expressMiddleware());
 }
