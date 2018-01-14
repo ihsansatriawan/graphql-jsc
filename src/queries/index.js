@@ -7,3 +7,6 @@ export {
   GetKelurahanQuery as getKelurahan,
   GetKecamatanQuery as getKecamatan,
 } from './JakartaSmartCity';
+export {
+  GetListNews as get_news
+} from './NewsAPI'
